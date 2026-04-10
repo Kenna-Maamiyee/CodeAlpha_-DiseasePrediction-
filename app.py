@@ -434,3 +434,10 @@ if st.button("🗑 Clear History"):
     cursor.execute("DELETE FROM history")
     conn.commit()
     st.success("Cleared!")
+
+
+import os
+import joblib
+
+model_path = os.path.join(os.path.dirname(__file__), "heart_model.pkl")
+model = joblib.load(model_path)
